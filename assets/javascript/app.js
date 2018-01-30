@@ -1,4 +1,4 @@
-var foods = ["pizza", "sandwhich", "wings", "tacos"];
+var foods = ["pizza", "sandwich", "wings", "tacos"];
 
 function displayInputInfo() {
   var userInput = $(this).attr("data-name");
@@ -30,6 +30,6 @@ function displayInputInfo() {
 
       var userInput = $().val().trim();
       userInput.push(foods);
-      
+
     });
   };
