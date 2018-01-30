@@ -4,4 +4,4 @@ This project is basic on food type gifs. A user can use the search button to loo
 
 Want to try it out? ------> [GifTastic](https://stacy89.github.io/GifTastic/)
 
-[Alt gifTastic screenshot](assets/images/gifTastic.png)
+![Alt gifTastic screenshot](assets/images/gifTastic.png)
