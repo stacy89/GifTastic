@@ -10,8 +10,8 @@ function displayGifs() {
     method: "GET"
   })
   .done(function(response) {
-    console.log(response.data);
-
+    $("#foodGifs").empty();
+    
     var results = response.data;
 
     for (i = 0; i < results.length; i++) {
@@ -27,11 +27,13 @@ function displayGifs() {
 
       foodGifs.attr("src", results[i].images.fixed_height_still.url);
 
-      $("#foodGifs").append(foodGifs);  
+      $("#foodGifs").append(foodGifs);
+
+      // $("#foodGifs").empty();
     }
     
     $(".gif").on("click", function() {
-      $(".gif").empty();
+
       var state = $(this).attr("data-state");
 
       if (state === "still") {
@@ -58,9 +60,10 @@ function generateButtons() {
     btn.text(foods[i]);
 
     $("#gifButtonList").append(btn);
+    
+  $("#foodGifs").empty();
   }
 };
-
 
 $("#search").on("click", function(event) {
   event.preventDefault();
@@ -72,10 +75,6 @@ $("#search").on("click", function(event) {
 
   generateButtons();
 });  
-
-$(".food").on("click", function() {
-  var state = $(this).attr("data-state");
-}); 
 
 $(document).on("click", ".food", displayGifs);
   generateButtons();
