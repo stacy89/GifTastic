@@ -5,21 +5,22 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div id="gifButtonList"></div>
+	<div id="gifButtonList">
+	</div>
 
 		<form id="gifForm">
-			<label for="gifInput">Add food type</label>
-			<input type="text" id="gifInput">
-			<input type="submit" value="Add food type">
+			<label for="foodType">Enter food type</label>
+			<input type="text" id="foodType">
+			<input type="submit" value="Search" id="search">
 		</form>
 
 		<div class="container">
-			<div class="foodGifs"></div>
+			<div id="foodGifs"></div>
 		</div>
 
 	</div>	
 	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" scr="assets/javascript/app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

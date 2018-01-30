@@ -1,35 +1,47 @@
-var foods = ["pizza", "sandwich", "wings", "tacos"];
+var foods = ["taco", "pizza", "cheese burger", "nachos"];
 
-function displayInputInfo() {
-  var userInput = $(this).attr("data-name");
+function displayGifs() {
+  var foodType = $(this).attr("data-name");
+  // console.log(foodType);
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + foodType + "&api_key=a4CZ1y7uj55cHWUQgQFIwqiKoiRbZhib&limit=10";
 
-  var URL = "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=a4CZ1y7uj55cHWUQgQFIwqiKoiRbZhib"
-
-  $.ajax.({
-    url: URL,
+  $.ajax({
+    url: queryURL,
     method: "GET"
   })
   .done(function(response) {
     console.log(response);
   });
+};
 
-  function displayButton() {
-    $("buttonInfo").empty();
+// function generateButtons() {
+//   $("foodGifs").empty();
 
-    for (i = 0; i < foods.length; i++) {
-      var btn = $("<button>");
+//   for (i = 0; i < foods.length; i++) {
+//     var btn = $("<button>");
 
-      btn.addClass("gif");
-      btn.attr("data-name", foods[i]);
-      btn.text(foods[i]);
-      $(".foodGifs").append(btn);
-    }
+//     btn.addClass("food");
 
-    $().on("click", function(event) {
-      event.preventDefault();
+//     btn.attr("data-name", foods[i]);
 
-      var userInput = $().val().trim();
-      userInput.push(foods);
+//     btn.text(foods[i]);
 
-    });
-  };
+//     $("#gifButtonList").append(btn);
+//   }
+// };
+
+
+// $("#search").on("click", function(event) {
+//   event.preventDefault();
+
+//   var foodType = $("#foodType").val();
+//   foods.push(foodType);
+
+//   generateButtons();
+// });  
+
+// $(document).on("click", ".food", function() {
+
+// });
+
+
