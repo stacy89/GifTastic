@@ -3,23 +3,38 @@
 <head>
 	<title>GifTastic</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-	<div id="gifButtonList">
+
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container-fluid">
+	    <p id="gifButtonList" class="lead"></p>
+			<div class="card bg-light mb-3 ml-auto mr-5 " style="max-width: 20rem;">
+			  <div class="card-body">
+			    <p class="card-text">
+						<form id="gifForm">
+						  <div class="form-group text-center">
+						    <label>Enter food type</label>
+								<input type="text" id="foodType" class="form-control">
+								<input type="submit" value="Search" class="btn btn-outline-secondary mt-3" id="search">
+						  </div>
+						</form>  
+			    </p>
+			  </div>
+			</div>
+	  </div>
 	</div>
 
-		<form id="gifForm">
-			<label for="foodType">Enter food type</label>
-			<input type="text" id="foodType">
-			<input type="submit" value="Search" id="search">
-		</form>
-
-		<div class="container">
-			<div id="foodGifs"></div>
-		</div>
-
-	</div>	
 	
+
+	<div class="container-fluid">
+		<div id="foodGifs" class="text-center"></div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>

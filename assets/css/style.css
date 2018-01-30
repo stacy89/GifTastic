@@ -1,0 +1,8 @@
+body {
+	background-image: url("https://media.giphy.com/media/33g9jNeTf7yaQ/giphy.gif");
+}
+
+.gif {
+	border: solid 5px lightgrey;
+	margin: 20px;
+}

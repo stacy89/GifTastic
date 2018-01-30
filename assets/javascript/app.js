@@ -3,7 +3,7 @@ var foods = ["taco", "pizza", "cheese burger", "nachos"];
 function displayGifs() {
   var foodType = $(this).attr("data-name");
   
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + foodType + "&api_key=a4CZ1y7uj55cHWUQgQFIwqiKoiRbZhib&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + foodType + "&api_key=a4CZ1y7uj55cHWUQgQFIwqiKoiRbZhib&limit=20";
 
   $.ajax({
     url: queryURL,
@@ -51,7 +51,7 @@ function generateButtons() {
   for (i = 0; i < foods.length; i++) {
     var btn = $("<button>");
 
-    btn.addClass("food");
+    btn.addClass("food btn btn-outline-secondary mb-3 ml-3");
 
     btn.attr("data-name", foods[i]);
 
